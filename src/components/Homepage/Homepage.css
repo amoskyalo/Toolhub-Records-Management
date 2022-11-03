@@ -22,3 +22,12 @@
   color: #000;
   margin-bottom: 20px;
 }
+
+.head {
+  border: 1px solid black;
+}
+
+.form {
+  width: 50%;
+  margin: auto;
+}

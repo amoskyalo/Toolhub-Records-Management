@@ -1,8 +1,13 @@
-import Button from "react-bootstrap/Button";
+import { useState } from "react";
+import { records } from "../data/Mockdata";
 import Form from "react-bootstrap/Form";
 import "./Homepage.css";
 
 const Homepage = () => {
+  const [search, setSearch] = useState("");
+  const [userValue, setUserValue] = useState("");
+  const [useresult, setUseresult] = useState([]);
+
   return (
     <div className="homepage">
       <h1 className="heading"> Toolhub Records</h1>
@@ -15,12 +20,19 @@ const Homepage = () => {
         used for visual representation to view the accessible data.
       </p>
 
-      <Form>
+      <Form className="form">
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Search for a tool by name:</Form.Label>
-          <Form.Control type="text" placeholder="Enter tool" />
+          <Form.Label>Search for a tool by name :</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Enters tool"
+            onChange={(e) => setUserValue(e.target.value)}
+          />
         </Form.Group>
-        <Button variant="primary">Submit</Button>{" "}
+
+        <div className="head">
+          <h3>Toolhub Records</h3>
+        </div>
       </Form>
     </div>
   );
