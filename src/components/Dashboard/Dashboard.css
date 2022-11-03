@@ -34,6 +34,14 @@
     border-radius: 5px;
 }
 
+.menu-icon{
+    display: none;
+}
+
+.mb{
+    display: none;
+}
+
 .tables{
     display: flex;
     flex-direction: column;
@@ -55,6 +63,7 @@
 .table h2{
     font-weight: 900;
     font-size: 24px;
+    color: initial;
 }
 
 .table p{
@@ -77,4 +86,45 @@
 
 .false{
     background-color: #3da58a;
+}
+
+@media(max-width: 768px){
+    .dashboard{
+        width: 100%;
+        flex-direction: row;
+        margin-top: 0;
+        padding: 0rem 0.5rem 0 0;
+    }
+
+    .tables{
+        margin-left: 0;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .dashboard-nav{
+        max-width: max-content;
+        min-width: max-content;
+        position: sticky;
+        top: 4rem;
+        padding: 0.5rem 1rem 0 0.5rem;
+        font-size: 13px;
+        border-radius: 0;
+    }
+
+    .dash-nav-links a{
+        border: none;
+        padding: 0;
+    }
+
+    .menu-icon{
+        display: block;
+    }
+
+    .dash-nav-links .ds{
+        display: none;
+    }
+    .mb{
+        display: block;
+    }
 }

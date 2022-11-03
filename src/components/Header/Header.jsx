@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import { FiSettings } from "react-icons/fi";
@@ -10,6 +10,15 @@ import Button from "react-bootstrap/Button";
 const Header = () => {
   const [active, setActive] = useState(false);
   const [sticky, setSticky] = useState("");
+  const [theme, setTheme] = useState(false);
+
+  useEffect(()=>{
+    if(theme){
+      document.body.classList = 'black';
+    }else{
+      document.body.classList = '';
+    };
+  }, [theme]);
 
   window.addEventListener("scroll", () => {
     if (window.pageYOffset > 50) {
@@ -31,7 +40,7 @@ const Header = () => {
       </div>
       <div className="nav-settings">
         <FiSettings className="icon" />
-        <CiDark className="icon toggler" />
+        <CiDark className="icon toggler" onClick={()=>setTheme(!theme)}/>
         <Button variant="primary" size="sm">
           Sign In
         </Button>

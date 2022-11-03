@@ -4,7 +4,6 @@ import Table from 'react-bootstrap/Table'
 
 const Edited = ({data}) => {
     const edited = data.filter((data) => (data.edited));
-    console.log(edited);
   return (
     <div className='table'>
     <h2>EDITED RECORDS</h2>

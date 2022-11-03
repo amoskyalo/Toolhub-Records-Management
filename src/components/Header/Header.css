@@ -4,7 +4,9 @@ nav{
     align-items: center;
     position: relative;
     padding: 0.5rem 0;
+    min-width: 100%;
     z-index: 999;
+    box-sizing: border-box;
 }
 
 .stickyNav{
@@ -53,8 +55,9 @@ nav{
     nav{
         justify-content: space-between;
         padding: 1rem 0;
-        background-color: #0d6efd;
+        background-color: #3e4396;
         color: #ffff;
+        width: 100%;
     }
 
     .menu, .user{
@@ -65,7 +68,7 @@ nav{
         flex-direction: column;
         position: absolute;
         top: -1000%;
-        background-color: #0d6efd;
+        background-color: #3e4396;
         width: 100%;
         height: max-content;
         z-index: 99;
@@ -74,7 +77,7 @@ nav{
     }
     
     .nav-links-toggle{
-        top: 4rem;
+        top: 3rem;
     }
 
     .nav-settings button{
